@@ -100,7 +100,7 @@ O sinal `*` procura o valor em qualquer parte da String.
 ```html
 <!-- arquivo.html -->
 
-<a href="https://www.google.com.br/">OK -Tem a sequência 'google' no valor da atributo href</a>
+<a href="https://www.google.com.br/">OK -Tem a sequência 'google' no valor do atributo href</a>
 <a href="https://www.youtube.com/"></a>
 ```
 
@@ -122,12 +122,12 @@ Podem ou não ocnter valores.
 <div personalizado="sim">OK -Tem a sequência 'sim' no valor da atributo href</div>
 ```
 
-O sinal `~` procura a sequência exata (sozinha).
+Exatamente a sequência (sozinha).
 
 ```css
 /* arquivo.css */
 
-[personalizado~=sim] {}
+[personalizado=sim] {}
 ```
 
 ```html
