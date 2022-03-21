@@ -355,6 +355,8 @@ ul li:last-child {
 }
 ```
 
+![first-child- -last-child](https://user-images.githubusercontent.com/69995549/159374377-6a646358-fcc5-4585-b899-732287e88b9a.png)
+
 Uso Real (Remover a última borda).
 
 ```css
@@ -377,6 +379,8 @@ ul li:last-child {
 }
 ```
 
+![last-child-real](https://user-images.githubusercontent.com/69995549/159374378-f990ec03-073f-4cbf-b238-31373d0c3b60.png)
+
 ### :NTH-CHILD(parâmetro)
 
 ```css
@@ -386,6 +390,8 @@ ul li:nth-child(2) {
     color: green;
 }
 ```
+
+![nth-child](https://user-images.githubusercontent.com/69995549/159374381-3841bebb-0bc7-409e-86e0-d267a807d4d2.png)
 
 * n
   * todas a linhas
@@ -412,6 +418,8 @@ ul li:nth-child(even) {
 }
 ```
 
+![nth-child-2n- -even](https://user-images.githubusercontent.com/69995549/159374382-3d0faa7a-fb9f-400f-ba1c-c99c47f8bdf3.png)
+
 Para pegar os ímpares temos as duas opções.
 
 ```css
@@ -425,6 +433,8 @@ ul li:nth-child(odd) {
     color: green;
 }
 ```
+
+![nth-child-2n-1- -odd](https://user-images.githubusercontent.com/69995549/159374385-1d896375-f2e9-4e9b-b519-ac4301d1c10e.png)
 
 ### :NTH-LAST-CHILD(parâmetro)
 
@@ -463,6 +473,8 @@ div :nth-child(2n) {
 }
 ```
 
+![nth-child-vs-nth-of-type-1](https://user-images.githubusercontent.com/69995549/159374386-ec326422-3c08-47c0-8ffc-9f957d43a700.png)
+
 Vai pegar cada filho direto, que seja o segundo elemento do tipo do filho.
 
 ```css
@@ -472,6 +484,8 @@ div :nth-of-type(2n) {
     color: green;
 }
 ```
+
+![nth-child-vs-nth-of-type-2](https://user-images.githubusercontent.com/69995549/159374387-2749413c-e077-4f25-99e9-affcc38ea228.png)
 
 ### :DISABLED & :ENABLED
 
@@ -590,6 +604,8 @@ h1::after {
 }
 ```
 
+![before-after](https://user-images.githubusercontent.com/69995549/159374370-fc528058-6770-4817-a3bc-c3dac154382c.png)
+
 ```css
 /* arquivo.css */
 
@@ -609,6 +625,8 @@ h1::after {
     background-color: green;
 }
 ```
+
+![before-after-row](https://user-images.githubusercontent.com/69995549/159374375-c739a3db-fdd2-47ec-b71b-02af0b438964.png)
 
 ```css
 /* arquivo.css */
@@ -631,6 +649,8 @@ h1::after {
     border-radius: 50%;
 }
 ```
+
+![before-after-circle](https://user-images.githubusercontent.com/69995549/159374373-f79890b3-1572-4849-ac06-40c1fd3d550c.png)
 
 ```html
 <!-- arquivo.html -->
