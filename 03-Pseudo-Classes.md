@@ -1,10 +1,20 @@
+```html
+/* arquivo.html */
+
+<button>Enviar</button>
+```
+
 Ao passar o cursor por cima do elemento
 
 ```css
 /* arquivo.css */
 
-button:hover {}
+button:hover {
+    background-color: green;
+}
 ```
+
+
 
 ***
 
