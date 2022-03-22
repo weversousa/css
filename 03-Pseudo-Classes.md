@@ -14,6 +14,8 @@ button:hover {
 }
 ```
 
+![hover](https://user-images.githubusercontent.com/69995549/159518544-2a15aec8-f06b-4b23-a53d-c31e27858338.gif)
+
 ***
 
 Ao clicar no elemento.
@@ -32,6 +34,30 @@ button:active {
 }
 ```
 
+![active](https://user-images.githubusercontent.com/69995549/159518647-97ae1ca9-e3ae-4afe-8250-236da9409cb2.gif)
+
+***
+
+Elementos que não tenhamconteúdo.
+
+```html
+/* arquivo.html */
+
+<button>Enviar</button>
+<button>Cancelar</button>
+<button>Limpar</button>
+```
+
+```css
+/* arquivo.css */
+
+button:empty {
+    background-color: plum;
+}
+```
+
+![empty](https://user-images.githubusercontent.com/69995549/159520277-dff3773d-bfe3-4475-a56e-21b0fba5d098.png)
+
 ***
 
 Ao focar no elemento.
@@ -49,6 +75,8 @@ button:focus {
     background-color: brown;
 }
 ```
+
+![focus](https://user-images.githubusercontent.com/69995549/159518723-5dfb9563-72f7-4a39-843f-2d82802c530d.gif)
 
 ***
 
@@ -69,6 +97,8 @@ button:not(.limp) {
     background-color: lightskyblue;
 }
 ```
+
+![not](https://user-images.githubusercontent.com/69995549/159519021-27afcc7d-e22f-4602-b794-4816169c8b9c.png)
 
 ***
 
@@ -93,6 +123,8 @@ Campos de formulário ou elementos que tem a propriedade `disabled`.
 /* Pega o que estiver diferente de disabled */
 :enabled {}
 ```
+
+![disabled](https://user-images.githubusercontent.com/69995549/159519102-2b809b34-fb7c-45b9-abed-8caaa3a556a1.png)
 
 ***
 
@@ -175,9 +207,11 @@ input:checked {
 }
 ```
 
+![checked](https://user-images.githubusercontent.com/69995549/159519169-1465ed77-8b0f-4cc3-aa12-aab4d223bd11.gif)
+
 ***
 
-Combinando pseudo classes.
+Combinando pseudo classes com pseudo elementos.
 
 ```html
 /* arquivo.html */
@@ -201,6 +235,8 @@ input:checked::after {
     color: green;
 }
 ```
+
+![checked after](https://user-images.githubusercontent.com/69995549/159519300-b4ac1975-b394-4ab2-9cf0-601518f64b00.gif)
 
 ***
 
