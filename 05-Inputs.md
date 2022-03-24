@@ -6,13 +6,14 @@
 ```css
 /* arquivo.css */
 
-main {
+
+.labelFloat {
 
     /* Para o label ser absoluto dentro dele */
     position: relative;
 }
 
-input[type='text'] {
+.inputFloat {
 
     /* Limpando os estilos que vem por padrão */
     appearance: none;
@@ -31,7 +32,7 @@ input[type='text'] {
     cursor: pointer;
 }
 
-label.labelFloat {
+.spanFloat {
 
     /* Será absoluto dentro do main que está como relativo */
     position: absolute;
@@ -43,25 +44,39 @@ label.labelFloat {
 }
 
 
-/* Quando o input for focado e se logo abaixo a ele for um label */
-/* Se o placeholder NÃO estiver sendo exibido (significaa que ta preenchido) e se logo abaixo a ele for um label */
-input.inputFloat:focus + label.labelFloat,
-input.inputFloat:not(:placeholder-shown) + label.labelFloat {
+/* Quando o input for focado e se logo abaixo a ele for um span */
+/* Se o placeholder NÃO estiver sendo exibido (significaa que ta preenchido) e se logo abaixo a ele for um span */
+.inputFloat:focus + .spanFloat,
+.inputFloat:not(:placeholder-shown) + .spanFloat {
 
     transition: all 0.6s;
 
-    /* Move o label conforme especificado */
+    /* Move o span conforme especificado */
     top: -8px;
 
     /* Caso a cor de fundo do input e div que envolve o input sejam a mesma */
-    /* Colocando a mesma cor de fundo deles vai causar um efeito como se a borda estivesse aberta na área do label   */
+    /* Colocando a mesma cor de fundo deles vai causar um efeito como se a borda estivesse aberta na área do span   */
     background-color: aliceblue;
+
+    padding: 0 7px 0 7px;
 }
 ```
 
-![input-float](https://user-images.githubusercontent.com/69995549/159974322-01bed151-c80f-4c9e-bcaf-54bd0d7d7401.gif)
+```html
+<!-- arquivo.html -->
+
+
+<label class="labelFloat">
+    <input type="text" placeholder=" " class="inputFloat">
+    <span class="spanFloat">Seu nome</span>
+</label>
+```
+
+![float-inputgif](https://user-images.githubusercontent.com/69995549/160025277-339c06db-262c-4a97-b041-89a7755ee585.gif)
 
 ***
+
+## Checkbox
 
 ```css
 /* arquivo.css */
@@ -71,6 +86,10 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.labelCheckCourse:hover {
+    cursor: pointer;
 }
 
 .inputCheckCourse {
@@ -90,6 +109,7 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
     background-color: rgb(216, 112, 147, 40%);
 }
 
+
 .inputCheckCourse:checked {
     transition: all 0.6s;
     background-color: rgb(216, 112, 147, 75%);
@@ -103,7 +123,6 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
 
 .spanCheckCourse {
     font-size: 50px;
-    font-weight: bold;
     color: palevioletred;
 }
 ```
@@ -114,12 +133,7 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
 
 <label class="labelCheckCourse">
     <input type="checkbox" class="inputCheckCourse">
-    <span class="spanCheckCourse">Python</span>
-</label>
-
-<label class="labelCheckCourse">
-    <input type="checkbox" class="inputCheckCourse">
-    <span class="spanCheckCourse">CSS</span>
+    <span class="spanCheckCourse">Checkbox</span>
 </label>
 ```
 
@@ -132,26 +146,77 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
 </svg>
 ```
 
-![inputCheck](https://user-images.githubusercontent.com/69995549/159992406-e6650f18-a2d4-40fe-8071-c6a0380a7c4a.gif)
+![checkbox](https://user-images.githubusercontent.com/69995549/160023753-44f48a21-3017-480e-901e-55213d8cb523.gif)
 
 ***
-
-
-
-```svg
 
 ```css
 /* arquivo.css */
 
 
+.labelRadio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.labelRadio:hover {
+    cursor: pointer;
+}
+
+.inputRadio {
+    appearance: none;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid palevioletred;
+    border-radius: 50%;
+}
+
+.inputRadio:hover::after {
+    content: '';
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    background-color: rgb(216, 112, 147, 40%);
+    cursor: pointer;
+}
+
+.inputRadio:checked::after {
+    content: '';
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    background-color: rgb(216, 112, 147, 75%);
+}
+
+.spanRadio {
+    font-size: 50px;
+    color: palevioletred;
+}
 ```
 
 ```html
 <!-- arquivo.html -->
 
 
+<label class="labelRadio">
+    <input type="radio" name="radio" class="inputRadio">
+    <span class="spanRadio">Radio 1</span>
+</label>
+<label class="labelRadio">
+    <input type="radio" name="radio" class="inputRadio">
+    <span class="spanRadio">Radio 2</span>
+</label>
 ```
 
-```svg
-
-```
+![radio](https://user-images.githubusercontent.com/69995549/160023981-73c9fed0-6849-4d1b-96cf-f4043d9ab8df.gif)
