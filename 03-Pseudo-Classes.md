@@ -1,4 +1,13 @@
-Ao passar o cursor no elemento.
+# Pseudo-classes
+
+Uma *pseudo-classe* CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado.  
+Sintaxe `elemento:pseudo-classe {}` ou `:pseudo-classe {}`
+Algumas delas possuem parâmetros então ficaria asism `elemento:pseudo-classe(parâmetro) {}`.
+
+
+## :hover
+
+Ao passar o cursor sobre o elemento.
 
 ```html
 /* arquivo.html */
@@ -17,6 +26,8 @@ button:hover {
 ![hover](https://user-images.githubusercontent.com/69995549/159518544-2a15aec8-f06b-4b23-a53d-c31e27858338.gif)
 
 ***
+
+## :active
 
 Ao clicar no elemento.
 
@@ -38,7 +49,9 @@ button:active {
 
 ***
 
-Elementos que não tenhamconteúdo.
+## :empty
+
+Elementos que não tenham conteúdo dentro dele.
 
 ```html
 /* arquivo.html */
@@ -60,6 +73,8 @@ button:empty {
 
 ***
 
+## :focus
+
 Ao focar no elemento.
 
 ```html
@@ -80,7 +95,10 @@ button:focus {
 
 ***
 
-Elementos que não tenham determinada condição passada por parâmetro.
+## :not(parameter)
+
+Elementos que não tenham determinada condição passada por parâmetro.  
+O Not é um método, então ele necessita de parâmetros entre parênteses.
 
 ```html
 /* arquivo.html */
@@ -102,7 +120,11 @@ button:not(.limp) {
 
 ***
 
-Campos de formulário ou elementos que tem a propriedade `disabled`.
+## :disabled & :enabled
+
+Campos de formulário ou elementos que tem a propriedade `disabled`.  
+Por padrão é `enabled`
+
 
 ```html
 /* arquivo.html */
@@ -128,6 +150,11 @@ Campos de formulário ou elementos que tem a propriedade `disabled`.
 
 ***
 
+## :invalid & :valid
+
+Baseado em cima dos valores das propriedades definidas no elemento. Exemplo, um input com o tipo e-mail,  
+caso o valor digitado não atenda o padrão de um e-mail esse elemento será capturado pelo `:invalid`.
+
 ```html
 <!-- arquivo.html -->
 
@@ -142,6 +169,12 @@ input:valid {}
 ```
 
 ***
+
+## :required
+
+Exemplo, um input com a propriedade `required`, antes de enviar o formulário
+ele deve receber obrigatoriamente um valor caso não aconteça será capturado pelo `:invalid`.  
+Por padrão é `optional`
 
 ```html
 <!-- arquivo.html -->
@@ -159,6 +192,11 @@ input:optional {}
 
 ***
 
+## :readonly
+
+signifa comente leitura, exemplo, um input com essa propriedade não pode ser alterado.  
+Por padrão `Readwrite`.
+
 ```html
 <!-- arquivo.html -->
 
@@ -175,6 +213,10 @@ input:read-write {}
 
 ***
 
+## :in-range & :out-of-range
+
+Usado em inputs do tipo numérico e baseado nas propriedades *min* e *max*.
+
 ```html
 <!-- arquivo.html -->
 
@@ -189,6 +231,10 @@ input:out-of-range {}
 ```
 
 ***
+
+## :checked)
+
+Seleciona os elementos checkbox que estão checados.
 
 ```html
 /* arquivo.html */
@@ -210,6 +256,8 @@ input:checked {
 ![checked](https://user-images.githubusercontent.com/69995549/159519169-1465ed77-8b0f-4cc3-aa12-aab4d223bd11.gif)
 
 ***
+
+## ::fter & :checked
 
 Combinando pseudo classes com pseudo elementos.
 
@@ -240,7 +288,9 @@ input:checked::after {
 
 ***
 
-Selecionando o primeiro e o último elemento.
+## :first-child & last-child)
+
+Selecionando o primeiro e o último elemento.  
 
 ```html
 <!-- arquivo.html -->
@@ -266,6 +316,45 @@ ul li:last-child {
 ```
 
 ![first-child- -last-child](https://user-images.githubusercontent.com/69995549/159374377-6a646358-fcc5-4585-b899-732287e88b9a.png)
+
+### Observação
+
+Caso o primeiro filho de ul não fosse um li, não iria funcionar.  
+Por exemplo, se tive um h1 antes dos li.  
+A condição não é simplesmente o primeiro filho, mas sim "pegue o *li* caso ele seja o primeiro filho.  
+Atenção nisso pois é que confunde geral.  
+
+Serve a mesma regra para o `last-child`.  
+  
+  
+Para isso temos a pseudo-classes `nth-of-type` que pega o primeiro filho do tipo especificado,  
+mesmo que ele não seja o primeiro filho.  
+E se a gente não especificar o tipo do filho, ele vai pegar o 1º filho d ecada tipo.
+  
+  
+Mas também devemos ter atenção. Vamos supor que a gente quer selecionar o 1º elemento  
+com uma classe qualquer.  
+
+```css
+
+div .destaque:nth-of-type(1) {
+    color: red;
+}
+```
+
+```html
+
+<div>
+    <h1>H 1</h1>
+    <p>P 1</p>
+    <p class="destaque">P 2</p>
+    <p>P 3</p>
+</div>
+```
+
+Não funciona devido a propriedade `nth-of-type` trabalhar diretamente pela tag.  
+O código em CSS está falando (rsrsrs): pegue o 1º filho da *div* do tipo *p* SE ele tiver a classe destaque.  
+Acontece que o 1º filho *p* da *div* não tem a classe destaque.
 
 ***
 
@@ -295,6 +384,9 @@ ul li:last-child {
 
 ***
 
+## nth-child
+
+nth signica enésimo.  
 Selecionando o segundo elemento.
 
 ```css
@@ -321,6 +413,10 @@ Breve conceito para os parâmetros
   * 2 x 1 - 1 = 1 - primeira linha
   * 2 x 2 - 1 = 3 - terceira linha
   * 2 x 3 - 1 = 5 - quinta linha
+
+  
+O valor *n* vai de 0 até 1.  
+E o 2 poderia ser qualquer número, e ele seria multiplicado por n.
 
 ***
 
