@@ -54,6 +54,10 @@ input.inputFloat:not(:placeholder-shown) + label.labelFloat {
 }
 ```
 
+![input-float](https://user-images.githubusercontent.com/69995549/159974322-01bed151-c80f-4c9e-bcaf-54bd0d7d7401.gif)
+
+***
+
 ```html
 <!-- arquivo.html -->
 
