@@ -103,5 +103,10 @@ label:hover:after {
 ```
 
 ![com-overflow](https://user-images.githubusercontent.com/69995549/160041871-789c80d5-456f-4eab-b23a-9f55aebff2a5.gif)
+  
+  
+*_Abaixo o mesmo slider, porém sem o atributo overflow para esconder as imagens, assim temos uma noção de como funciona o deslocamento das imagens._*  
+*_Elas transbordam de seu container a cada deslocamento, ai vem o truco do 'overflow: hidden' que esconde tudo que transborda de seu elemento_.*
 
-Abaixo o mesmo slider, porém sem o atributo overflow para esconder as imagem, assim temos uma noção de como funciona o deslocamento das imagens.
+![sem-overflow](https://user-images.githubusercontent.com/69995549/160042378-e8cbfe31-f3b4-4c21-9289-0392e1abd68e.gif)
+
