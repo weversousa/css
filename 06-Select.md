@@ -70,3 +70,5 @@
     <span class="spanSelectNovo">Escolha...</span>
 </div>
 ```
+
+![select](https://user-images.githubusercontent.com/69995549/160171032-249d14d2-96b7-4b3d-87c5-528c0fdadf8f.gif)
